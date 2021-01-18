@@ -1,4 +1,4 @@
 RewriteEngine on
 
 RewriteCond %{REQUEST_URI} ^/new$
-RewriteRule ^(.*)$ 404.php [QSA,L]
+RewriteRule ^(.*)$ src/css.css [QSA,L]
