@@ -1,4 +1,4 @@
 RewriteEngine on
 
 RewriteCond %{REQUEST_URI} ^/new$
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^(.*)$ 404.php [QSA,L]
