@@ -1,6 +1,8 @@
 <?php
 $conn = pg_connect(getenv("DATABASE_URL"));
 
-pg_query($conn, "CREATE TABLE thread(id SERIAL, title VARCHAR(128));");
-pg_query($conn, "CREATE TABLE message(id SERIAL, content VARCHAR(512), threadid INT, CONSTRAINT fk_message_thread FOREIGN KEY (threadid) REFERENCES thread(id));");
+pg_query($conn, "DROP TABLE IF EXIST message;");
+pg_query($conn, "DROP TABLE IF EXIST thread;");
+pg_query($conn, "CREATE TABLE thread(id SERIAL PRIMARY KEY, title VARCHAR(128));");
+pg_query($conn, "CREATE TABLE message(id SERIAL PRIMARY KEY, content VARCHAR(512), threadid INT, CONSTRAINT fk_message_thread FOREIGN KEY (threadid) REFERENCES thread(id));");
 ?>

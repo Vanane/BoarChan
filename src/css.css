@@ -21,8 +21,10 @@ body
 .topmenu
 {
     position:relative;
+    box-sizing:border-box;
     top:0;
     width:75%;
+    left:12.5%;
     padding:1em;
     background-color:white;
     border:solid 1px black;
