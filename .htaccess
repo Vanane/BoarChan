@@ -2,6 +2,7 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_URI} ^/new$ [OR]
 RewriteCond %{REQUEST_URI} ^/thread/[0-9]+(/[a-z]+){0,1}$ [OR]
+RewriteCond %{REQUEST_URI} ^/about$ [OR]
 RewriteCond %{REQUEST_URI} ^/home$
 RewriteRule ".?" "-" [S=1]
 

@@ -7,6 +7,7 @@
     <body>
     <?php
         include("src/menu.php");
+        include("src/controller.php");
     ?>
     </body>
 </html>
