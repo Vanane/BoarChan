@@ -1,9 +1,9 @@
 <?php
-    if(!isset($_GET["name"]))
+    if(!isset($_POST["name"]))
     {
 ?>
             
-<form action="new.php" method="GET">
+<form action="new.php" method="POST">
     Title : <input type="text" name="name" placeholder="title"/>
     <input type="submit" value="Create"/>
 </form>
