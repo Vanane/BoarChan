@@ -15,6 +15,8 @@
             if(isset($path[2]))
                 include("src/viewthread.php");
         break;
+        case "send":
+            include("src/send.php");
         default:
             include("src/404.php");
         break;

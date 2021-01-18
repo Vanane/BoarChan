@@ -1,5 +1,4 @@
 <?php
-
     echo "\n\nthread number : ".$path[2]."\n\n";
     $result = pg_query($conn, "SELECT * FROM message WHERE id=".$path[2].";");
     if(!$result)
@@ -14,3 +13,9 @@
     }
 
 ?>
+
+<form action="send" method="post">
+    <input type="textarea" name="content" />
+    <input type="submit" value="Submit" />
+    <input type="text" name="thread" value="<?php echo $path[3]; ?>" hidden />
+</form>
