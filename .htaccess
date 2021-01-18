@@ -5,4 +5,4 @@ RewriteCond %{REQUEST_URI} ^/thread/[0-9]+(/[a-z]+){0,1}$ [OR]
 RewriteCond %{REQUEST_URI} ^/home$
 RewriteRule ^(.*)$ index.php [QSA,L]
 
-RewriteRule ^(.*)$ 404.php [L]
+#RewriteRule ^(.*)$ 404.php [L]
