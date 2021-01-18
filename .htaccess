@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule "%{HTTP_HOST}" "https://boarchan.herokuapp.com/%{QUERY_STRING}" [R=301, L]
