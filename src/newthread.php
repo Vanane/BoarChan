@@ -12,7 +12,7 @@
     }
     else
     {
-        $result = pg_query($conn, "INSERT INTO thread (title) VALUES(\"".$_POST["name"]."\") RETURNING id;");
+        $result = pg_query($conn, "INSERT INTO thread (`title`) VALUES(\"".$_POST["name"]."\") RETURNING id;");
         $row = pg_fetch_row($result);
         echo "<a href='thread/".$row[0]."'>thread created !</a>";
     }
