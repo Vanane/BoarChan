@@ -1,10 +1,16 @@
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} ^/new$ [OR]
-RewriteCond %{REQUEST_URI} ^/thread/[0-9]+(/[a-z]+){0,1}$ [OR]
-RewriteCond %{REQUEST_URI} ^/about$ [OR]
-RewriteCond %{REQUEST_URI} ^/home$
+RewriteCond %{REQUEST_URI} ^(.*)\/[a-z0-9]+\.(css|js)$
 RewriteRule ".?" "-" [S=1]
-
-RewriteRule !^index\.php$ 404.php [L]
 RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+# RewriteEngine on
+
+# RewriteCond %{REQUEST_URI} ^/new$ [OR]
+# RewriteCond %{REQUEST_URI} ^/thread/[0-9]+(/[a-z]+){0,1}$ [OR]
+# RewriteCond %{REQUEST_URI} ^/about$ [OR]
+# RewriteCond %{REQUEST_URI} ^/home$
+
+# RewriteRule !^index.php$ 404.php [L]
+# RewriteRule ^(.*)$ index.php [QSA,L]
