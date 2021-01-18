@@ -13,7 +13,7 @@
     else
     {
         pg_query($conn, "INSERT INTO thread (title) VALUES(".$_POST["name"].");");
-        $result = pg_query($conn, "SELECT * FROM thread WHERE id=MAX(id) LIMIT 1;");
+        $result = pg_query($conn, "SELECT MAX(id) FROM thread LIMIT 1;");
         $row = pg_fetch_row($result);
         echo "<a href='thread/".$row[0]."'>thread created !</a>";
     }
