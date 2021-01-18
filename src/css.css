@@ -1,0 +1,44 @@
+body, html
+{
+    background-color:#9890df;
+    padding:0;
+    margin:0;
+}
+
+html
+{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+body
+{
+    width:100%;
+    height:100%;
+}
+
+.menu
+{
+    position:relative;
+    top:0;
+    width:75%;
+    padding:1em;
+    background-color:white;
+}
+
+.buttonlink
+{
+    display:inline-block;
+    padding:1em;
+    border:solid 1px black;
+}
+
+
+.logo
+{
+    position:relative;
+    margin:0 auto;
+    width:480px;
+    height:240px;
+}
