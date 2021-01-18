@@ -1,4 +1,6 @@
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} ^/new$
-RewriteRule ^(.*)$ src/css.css [QSA,L]
+RewriteCond %{REQUEST_URI} ^/new$ [OR]
+RewriteCond %{REQUEST_URI} ^/thread/[0-9]+(/[a-z]+){0,1}$ [OR]
+RewriteCond %{REQUEST_URI} ^/home$ [OR]
+RewriteRule ^(.*)$ index.php [QSA,L]
