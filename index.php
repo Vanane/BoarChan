@@ -1,3 +1,8 @@
+<?php
+
+require("src/db.php");
+?>
+
 <html>
     <head>
         <link rel="stylesheet" href="/src/css.css">
