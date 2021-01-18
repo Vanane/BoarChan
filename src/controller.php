@@ -13,7 +13,10 @@
         break;
         case "thread":
             if(isset($path[2]))
-                include("src/viewthread.php");
+            {
+                if(is_integer($path[2]))
+                    include("src/viewthread.php");
+            }
         break;
         case "send":
             include("src/send.php");
