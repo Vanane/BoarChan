@@ -14,7 +14,15 @@
         case "thread":
             if(isset($path[2]))
             {
-                include("src/viewthread.php");
+                switch($path[2])
+                {
+                    case "send":
+                        include("send.php");
+                    break;
+                    default:
+                        include("src/viewthread.php");
+                    break;
+                }
             }
         break;
         case "send":
