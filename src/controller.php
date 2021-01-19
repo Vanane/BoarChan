@@ -24,6 +24,8 @@
                     break;
                 }
             }
+            else
+                include("src/threadslist.php");
         break;
         case "send":
             include("src/send.php");
