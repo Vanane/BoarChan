@@ -1,6 +1,5 @@
 <?php
-
-require("src/db.php");
+//require("src/db.php");
 ?>
 
 <html>

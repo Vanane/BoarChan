@@ -6,7 +6,6 @@
         pg_query($conn, "INSERT INTO message(content, threadid) VALUES ('.$content.', '$thread');");
     }
     $host = $_SERVER['HTTP_HOST'];
-    $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
     $thread = isset($_POST["thread"]) ? "/".$_POST["thread"] : "";
-    header("Location: $host$uri/thread$thread");
+    header("Location: $host/thread$thread");
 ?>
