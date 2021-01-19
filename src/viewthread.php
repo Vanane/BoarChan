@@ -1,20 +1,25 @@
 <?php
-    echo "\n\nthread number : ".$path[2]."\n\n";
-    $result = pg_query($conn, "SELECT * FROM message WHERE threadid=".$path[2].";");
-    if(!$result)
+    $threadrow = pg_query("$conn", "SELECT title FROM thread WHERE id=".$path[2].";");
+    $messagerows = pg_query($conn, "SELECT * FROM message WHERE threadid=".$path[2].";");
+    if(!$messagerows || !$threadrow)
         echo "There was an error.";
     else
     {
-        if(pg_num_rows($result))
+        if(pg_num_rows($threadrow))
         {
-
-            while ($row = pg_fetch_row($result))
+            $threadTitle = pg_fetch_row($threadrow)[0];
+            $threadNum = $path[2];
+            echo "thread n° $threadNum : $threadNum";
+            if(pg_num_rows($messagerows))
             {
-                $messageNum = $row[0];
-                $messageContent = $row[1];
-                include("messagerow.php");
+                while ($row = pg_fetch_row($messagerows))
+                {
+                    $messageNum = $row[0];
+                    $messageContent = $row[1];
+                    include("messagerow.php");
+                }
+                include("src/messageform.php");
             }
-            include("src/messageform.php");
         }
         else
         {
