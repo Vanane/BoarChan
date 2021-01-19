@@ -1,5 +1,5 @@
 <?php
-    if(!isset($_POST["name"]) || !isset($_POST["messag"]))
+    if(!isset($_POST["name"]) || !isset($_POST["message"]))
     {
 ?>
             
