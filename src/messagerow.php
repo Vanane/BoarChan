@@ -1,4 +1,4 @@
 <div class="message">
-    <p>n°<?php echo $messageNum; ?></p>
-    <p>n°<?php echo $messageContent; ?></p>
+    <p>At <?php echo $messageDate; ?>, n°<?php echo $messageNum; ?> said :</p>
+    <p><?php echo $messageContent; ?></p>
 </div>
