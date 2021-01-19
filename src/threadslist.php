@@ -7,7 +7,7 @@
     {
         while($row = pg_fetch_row($threadrows))
         {
-            $threadLastMessage = $row[2];
+            $threadLastMessage = $row[0];
             $messagerow = pg_fetch_row(pg_query($conn, "SELECT stamp FROM message WHERE threadid=$threadLastMessage;"));
             $threadDate = $messagerow[0];            
             $threadNum = $row[0];
