@@ -1,5 +1,5 @@
 <?php
-    $threadrow = pg_query("$conn", "SELECT title FROM thread WHERE id=".$path[2].";");
+    $threadrow = pg_query($conn, "SELECT title FROM thread WHERE id=".$path[2].";");
     $messagerows = pg_query($conn, "SELECT * FROM message WHERE threadid=".$path[2].";");
     if(!$messagerows || !$threadrow)
         echo "There was an error.";
