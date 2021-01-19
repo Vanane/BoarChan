@@ -15,7 +15,7 @@
 ?>
 
 <form action="send" method="post">
-    <input type="textarea" name="content" />
+    Your message : <input type="textarea" name="content" />
     <input type="submit" value="Submit" />
     <input type="text" name="thread" value="<?php echo $path[3]; ?>" hidden />
 </form>

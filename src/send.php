@@ -7,5 +7,5 @@
     }
     $host = $_SERVER['HTTP_HOST'];
     $thread = isset($_POST["thread"]) ? "/".$_POST["thread"] : "";
-    header("Location: $host/thread$thread");
+    header("Location: /thread$thread");
 ?>
