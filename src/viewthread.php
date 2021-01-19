@@ -1,6 +1,6 @@
 <?php
     $threadrow = pg_query($conn, "SELECT title FROM thread WHERE id=".$path[2].";");
-    $messagerows = pg_query($conn, "SELECT * FROM message WHERE threadid=".$path[2].";");
+    $messagerows = pg_query($conn, "SELECT id, content, stamp FROM message WHERE threadid=".$path[2].";");
     if(!$messagerows || !$threadrow)
         echo "There was an error.";
     else
@@ -16,6 +16,7 @@
                 {
                     $messageNum = $row[0];
                     $messageContent = $row[1];
+                    $messageDate = $row[2];
                     include("messagerow.php");
                 }
                 include("src/messageform.php");
