@@ -7,7 +7,8 @@
     {
         if(pg_num_rows($threadrow))
         {
-            $threadTitle = pg_fetch_row($threadrow)[0];
+            $row = pg_fetch_row($threadrow);
+            $threadTitle = $row[0];
             $threadNum = $path[2];
             echo "thread n° $threadNum : $threadTitle";
             if(pg_num_rows($messagerows))
