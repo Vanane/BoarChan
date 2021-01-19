@@ -1,10 +1,12 @@
 <?php
 
     $path = explode('/', $_SERVER["REQUEST_URI"]);
-    if(isset($path[1]))
+    if(isset($path[1]) and $path[1] != "")
     {
         switch($path[1])
         {
+            case "flush":
+                include("flush.php");
             case "home":
                 include("src/home.php");
             break;
