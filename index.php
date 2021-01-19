@@ -7,10 +7,14 @@ require("src/db.php");
         <link rel="stylesheet" href="/src/css.css">
         <title>BoarChan - Like 4Chan, but not the same.</title>
     </head>
-    <body>
+    <body>    
     <?php
         include("src/menu.php");
+    ?>
+    <div class="content">
+    <?php
         include("src/controller.php");
     ?>
+    </div>
     </body>
 </html>

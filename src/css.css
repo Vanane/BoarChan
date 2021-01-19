@@ -30,6 +30,19 @@ body
     border:solid 1px black;
 }
 
+.content
+{
+    position:relative;
+    box-sizing:border-box;
+    margin-top:50px;
+    left:12.5%;
+    padding:4em 1em;
+    width:75%;
+    background-color:white;
+    border:solid 1px black;
+}
+
+
 .buttonlink
 {
     display:inline-block;
@@ -44,4 +57,14 @@ body
     margin:0 auto;
     width:480px;
     height:240px;
+}
+
+
+.message
+{
+    position:relative;
+    width:100%;
+    background-color:white;
+    border:solid 1px black;
+    margin: 10px 0;
 }

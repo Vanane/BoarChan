@@ -10,8 +10,9 @@
 
             while ($row = pg_fetch_row($result))
             {
-                echo "<p>Message N°".$row[0]."</p>";
-                echo "<p>".$row[1]."</p>";
+                $messageNum = $row[0];
+                $messageContent = $row[1];
+                include("messagerow.php");
             }
             include("src/messageform.php");
         }
