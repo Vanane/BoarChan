@@ -13,9 +13,10 @@
     }
     else
     {
+        $curtime = date('Y-m-d H:i:s');
         $result = pg_query($conn, "INSERT INTO thread (title) VALUES('".$_POST["name"]."') RETURNING id;");
         $row = pg_fetch_row($result);
-        pg_query($conn, "INSERT INTO message (content, threadid) VALUES('".$_POST["message"]."', '$row[0]');");
+        pg_query($conn, "INSERT INTO message (content, threadid, stamp) VALUES('".$_POST["message"]."', '$row[0]', '$curtime');");
         echo "<a href='thread/".$row[0]."'>thread created !</a>";
     }
 ?>

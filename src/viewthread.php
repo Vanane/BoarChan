@@ -20,7 +20,7 @@
                     $messageDate = $row[2];
                     include("messagerow.php");
                 }
-                include("src/messageform.php");
+                include("src/newmessage.php");
             }
         }
         else
