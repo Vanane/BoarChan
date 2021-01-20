@@ -21,7 +21,19 @@
                     switch($path[2])
                     {
                         case "send":
-                            include("send.php");
+                            if(isset($_POST["content"]) && isset($_POST["thread"]))
+                            {
+                                $thread = pg_escape_string($conn, $_POST["thread"]);
+                                $content = pg_escape_string($conn, htmlspecialchars($_POST["content"]));                                                        
+                                include("send.php");
+
+                                $host = $_SERVER['HTTP_HOST'];
+                                header("Location: /thread/$thread");                            
+                            }
+                            else
+                            {
+                                header("Location: /thread");                            
+                            }
                         break;
                         default:
                             include("src/viewthread.php");
