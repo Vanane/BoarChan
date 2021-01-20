@@ -1,5 +1,4 @@
 <?php
-    include("src/obfuscation.php");
     $path = explode('/', $_SERVER["REQUEST_URI"]);
     if(isset($path[1]) and $path[1] != "")
     {
