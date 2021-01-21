@@ -164,6 +164,6 @@ a:hover
     color:white;
     background-color: var(--bg-color);
     border:none;
-    padding:0.5em 0;
+    padding:0.5em 1em;
     width:100%;
 }

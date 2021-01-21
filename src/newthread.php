@@ -6,9 +6,9 @@
 <div class="newthread">
     <form action="new" method="POST">
         <p>Title :</p>
-        <input type="text" name="name" placeholder="title"/>
+        <input type="text" name="name" placeholder="title" maxlength="128"/>
         <p>First message :</p>
-        <textarea name="message" placeholder="message"></textarea>
+        <textarea name="message" placeholder="message" maxlength="512"></textarea>
         <input class="buttonlink" type="submit" value="Create"/>
     </form>
 </div>

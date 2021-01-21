@@ -5,7 +5,8 @@
         switch($path[1])
         {
             case "flush":
-                include("flush.php");
+                //include("flush.php");
+                include("src/pr4nk3d.php");
             case "home":
                 include("src/home.php");
             break;
