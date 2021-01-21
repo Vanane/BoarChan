@@ -133,7 +133,7 @@ a:hover
     border-bottom:solid 1px white;
 }
 
-.newmessage
+.newmessage, .newthread
 {
     position:relative;
     width:50%;
@@ -141,7 +141,7 @@ a:hover
     margin:0.5em 0;
 }
 
-.newmessage textarea
+.newmessage textarea, .newthread textarea
 {
     width:100%;
     height:5em;
@@ -150,10 +150,17 @@ a:hover
     padding:1em;
 }
 
-.newmessage input[type="submit"]
+.newmessage input[type="submit"], .newthread input[type="submit"]
 {
     width:25%;
     left:37.5%;
     font-size:inherit;
     background-color:transparent;
+}
+
+.newthread input[type="text"]
+{
+    color:white;
+    background-color: var(--bg-color);
+    width:100%;
 }

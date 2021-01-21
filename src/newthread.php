@@ -4,9 +4,11 @@
 ?>
             
 <form action="new" method="POST">
-    Title : <input type="text" name="name" placeholder="title"/>
-    First message : <input type="textarea" name="message" placeholder="message"/>
-    <input type="submit" value="Create"/>
+    <p>Title :</p>
+    <input type="text" name="name" placeholder="title"/>
+    <p>First message :</p>
+    <textarea name="message" placeholder="message"></textarea>
+    <input class="buttonlink" type="submit" value="Create"/>
 </form>
 
 <?php
