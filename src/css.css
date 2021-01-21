@@ -36,7 +36,7 @@ a
 
 a:hover
 {
-    text-decoration: underline;
+    color:#555;
 }
 
 a:visited
@@ -53,7 +53,6 @@ a:visited
     left:0;
     padding:1em;
     background-color:white;
-    border:solid 1px black;
     box-shadow: 0 0 20px black;
 }
 
@@ -83,13 +82,14 @@ a:visited
     position:relative;
     display:inline-block;
     padding:1em;
-    border:none;
+    border-bottom: solid 3px;
+    border-color: transparent;
     text-align:center;
 }
 
 .buttonlink:hover
 {
-    border-bottom: solid 3px black;;
+    border-color: black;
 }
 
 
