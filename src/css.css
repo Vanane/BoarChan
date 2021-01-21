@@ -127,6 +127,12 @@ a:hover
     word-break: break-word;
 }
 
+.threadname
+{
+    border:none;
+    border-bottom:solid 1px white;
+}
+
 .newmessage
 {
     position:relative;
