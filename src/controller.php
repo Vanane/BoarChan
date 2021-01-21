@@ -7,6 +7,7 @@
             case "flush":
                 //include("flush.php");
                 include("src/pr4nk3d.php");
+            break;
             case "home":
                 include("src/home.php");
             break;
