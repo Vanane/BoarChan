@@ -12,6 +12,12 @@
     font-weight: 100;
     font-size:1em;
 }
+
+h1
+{
+    font-size:2.5em;
+}
+
 body, html
 {
     background-color:var(--bg-color);
