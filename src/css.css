@@ -65,9 +65,9 @@ a:hover
     position:relative;
     box-sizing:border-box;
     margin-top:50px;
-    left:7.5%;
+    left:7.5vw;
     padding:1em 4em;
-    width:85%;
+    width:85vw;
     background-color:var(--second-color);
     border:solid 1px black;
     box-shadow: 0 0 20px black;
