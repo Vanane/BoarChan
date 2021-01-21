@@ -1,1 +1,1 @@
-<div class="rowseparator"/>
+<div class="rowseparator"></div>
