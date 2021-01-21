@@ -33,7 +33,8 @@ body
 
 a:hover
 {
-    color:#555;
+    color:#999;
+    text-decoration: underline;
 }
 
 .topmenu
@@ -83,6 +84,12 @@ a:hover
 {
     border-color: black;
 }
+
+.buttonlink:hover
+{
+    text-decoration: none;
+}
+
 
 
 .logo
