@@ -10,7 +10,8 @@
             $row = pg_fetch_row($threadrow);
             $threadTitle = $row[0];
             $threadNum = $path[2];
-            echo "thread n° $threadNum : $threadTitle";
+            echo "<h1>$threadTitle</h1>";
+            echo "thread n°$threadNum";
             if(pg_num_rows($messagerows))
             {
                 $first = true;
