@@ -44,7 +44,7 @@ a:hover
 
 .topmenu
 {
-    position:relative;
+    position:fixed;
     box-sizing:border-box;
     top:0;
     width:100%;
