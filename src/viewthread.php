@@ -13,13 +13,19 @@
             echo "thread n° $threadNum : $threadTitle";
             if(pg_num_rows($messagerows))
             {
+                $first = true;
                 while ($row = pg_fetch_row($messagerows))
                 {
+                    if(!$first)
+                        include("src/rowseparator.php");
+                    $first = false;
+    
                     $messageNum = $row[0];
                     $messageContent = $row[1];
                     $messageDate = $row[2];
                     include("messagerow.php");
                 }
+                include("src/rowseparator.php");
                 include("src/newmessage.php");
             }
         }

@@ -1,4 +1,4 @@
-<div class="message">
-    <p>At <?php echo $messageDate; ?>, n°<?php echo $messageNum; ?> said :</p>
+<div class="listrow">
+    <p>At <?php echo $messageDate; ?>, boar n°<?php echo $messageNum; ?> said :</p>
     <p><?php echo $messageContent; ?></p>
 </div>
