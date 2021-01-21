@@ -1,15 +1,17 @@
 <?php
-    if(!isset($_POST["name"]) || !isset($_POST["message"]))
+    if(!isset($_POST["name"]) &&  $_POST["name"] != "" || !isset($_POST["message"]) & $_POST["message"] != "")
     {
 ?>
-            
-<form action="new" method="POST">
-    <p>Title :</p>
-    <input type="text" name="name" placeholder="title"/>
-    <p>First message :</p>
-    <textarea name="message" placeholder="message"></textarea>
-    <input class="buttonlink" type="submit" value="Create"/>
-</form>
+           
+<div class="newthread">
+    <form action="new" method="POST">
+        <p>Title :</p>
+        <input type="text" name="name" placeholder="title"/>
+        <p>First message :</p>
+        <textarea name="message" placeholder="message"></textarea>
+        <input class="buttonlink" type="submit" value="Create"/>
+    </form>
+</div>
 
 <?php
     }
@@ -24,7 +26,7 @@
             $thread = $row[0];
             
             require("send.php");
-            Location("/thread/$thread");
+            header("Location: /thread/$thread");
         }
         else
             echo "There was an error, please try again.";
