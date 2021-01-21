@@ -31,6 +31,17 @@ body
 a
 {
     text-decoration: none;
+    color:black;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color:black;
 }
 
 .topmenu
@@ -72,8 +83,13 @@ a
     position:relative;
     display:inline-block;
     padding:1em;
-    border:solid 1px black;
+    border:none;
     text-align:center;
+}
+
+.buttonlink:hover
+{
+    border-bottom: solid 3px black;;
 }
 
 
