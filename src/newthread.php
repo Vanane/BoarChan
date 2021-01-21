@@ -15,11 +15,16 @@
     {
         $threadName = pg_escape_string($conn, htmlspecialchars($_POST["name"]));
         $result = pg_query($conn, "INSERT INTO thread (title) VALUES('".$threadName."') RETURNING id;");
-        $row = pg_fetch_row($result);
-
-        $content = pg_escape_string($conn, htmlspecialchars($_POST["message"]));
-        $thread = $row[0];
-        require("send.php");
-        echo "<a href='thread/".$thread."'>thread created !</a>";
+        if($result)
+        {
+            $row = pg_fetch_row($result);            
+            $content = pg_escape_string($conn, htmlspecialchars($_POST["message"]));
+            $thread = $row[0];
+            
+            require("send.php");
+            Location("/thread/$thread");
+        }
+        else
+            echo "There was an error, please try again.";
     }
 ?>
