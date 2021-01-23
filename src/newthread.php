@@ -45,6 +45,7 @@
         else
         {
             echo "There has been a problem with the captcha. Try again.";
+            var_dump($resp);
         }    
     }
 ?>
