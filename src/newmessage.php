@@ -4,5 +4,8 @@
         <textarea  name="content"></textarea>
         <input class="buttonlink" type="submit" value="Send" />
         <input type="text" name="thread" value="<?php echo $path[2]; ?>" hidden />
+        <?php
+            require("src/captcha.php");
+        ?>
     </form>
 </div>

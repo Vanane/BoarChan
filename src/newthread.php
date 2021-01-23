@@ -10,6 +10,9 @@
         <p>First message :</p>
         <textarea name="message" placeholder="message" maxlength="512"></textarea>
         <input class="buttonlink" type="submit" value="Create"/>
+        <?php
+            require("src/captcha.php");
+        ?>
     </form>
 </div>
 
