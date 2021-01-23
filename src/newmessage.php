@@ -6,6 +6,7 @@
         <input type="text" name="thread" value="<?php echo $path[2]; ?>" hidden />
         <?php
           require_once('src/recaptcha/recaptchalib.php');
+          $publickey = "6LcZZzkaAAAAAGXJqYPvTkh9kV8rIVB4WkuIun3Y";
           echo recaptcha_get_html($publickey);
         ?>
     </form>

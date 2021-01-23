@@ -12,6 +12,7 @@
         <input class="buttonlink" type="submit" value="Create"/>
         <?php
           require_once('src/recaptcha/recaptchalib.php');
+          $publickey = "6LcZZzkaAAAAAGXJqYPvTkh9kV8rIVB4WkuIun3Y";
           echo recaptcha_get_html($publickey);
         ?>
     </form>
@@ -22,6 +23,7 @@
     else
     {
         require_once('src/recaptcha/recaptchalib.php');
+        $privatekey = "6LcZZzkaAAAAAN1w55J7QO4RdHYG1w52KBQXSccD";
         $resp = recaptcha_check_answer ($privatekey,
                                       $_SERVER["REMOTE_ADDR"],
                                       $_POST["recaptcha_challenge_field"],
