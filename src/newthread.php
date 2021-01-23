@@ -11,7 +11,8 @@
         <textarea name="message" placeholder="message" maxlength="512"></textarea>
         <input class="buttonlink" type="submit" value="Create"/>
         <?php
-            require("src/captcha.php");
+          require_once('src/recaptcha/recaptchalib.php');
+          echo recaptcha_get_html($publickey);
         ?>
     </form>
 </div>
@@ -20,18 +21,30 @@
     }
     else
     {
-        $threadName = pg_escape_string($conn, htmlspecialchars($_POST["name"]));
-        $result = pg_query($conn, "INSERT INTO thread (title) VALUES('".$threadName."') RETURNING id;");
-        if($result)
+        require_once('src/recaptcha/recaptchalib.php');
+        $resp = recaptcha_check_answer ($privatekey,
+                                      $_SERVER["REMOTE_ADDR"],
+                                      $_POST["recaptcha_challenge_field"],
+                                      $_POST["recaptcha_response_field"]);
+        if($resp->is_valid)
         {
-            $row = pg_fetch_row($result);            
-            $content = pg_escape_string($conn, htmlspecialchars($_POST["message"]));
-            $thread = $row[0];
-            
-            require("send.php");
-            header("Location: /thread/$thread");
+            $threadName = pg_escape_string($conn, htmlspecialchars($_POST["name"]));
+            $result = pg_query($conn, "INSERT INTO thread (title) VALUES('".$threadName."') RETURNING id;");
+            if($result)
+            {
+                $row = pg_fetch_row($result);            
+                $content = pg_escape_string($conn, htmlspecialchars($_POST["message"]));
+                $thread = $row[0];
+                
+                require("send.php");
+                header("Location: /thread/$thread");
+            }
+            else
+            echo "There was an error, please try again.";
         }
         else
-            echo "There was an error, please try again.";
+        {
+            echo "There has been a problem with the captcha. Try again.";
+        }    
     }
 ?>
